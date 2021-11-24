@@ -15,18 +15,6 @@ int amstro(int n)
     return res;
 }
 
-int printAmstroRange(int n)
-{
-    int rem, res = 0;
-    while (n > 0)
-    {
-        rem = n % 10;
-        n = n / 10;
-        res = res + rem * rem * rem;
-    }
-    return res;
-}
-
 int main()
 {
     int num, ch;
@@ -53,7 +41,7 @@ int main()
         cin >> num;
         for (int i = 0; i <= num; i++)
         {
-            if (printAmstroRange(i) == i)
+            if (amstro(i) == i)
             {
                 cout << i << " ";
             }
